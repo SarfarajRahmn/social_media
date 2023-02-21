@@ -1,0 +1,25 @@
+{{>header}}
+
+<body>
+    {{>navbar}}
+
+<h1>hey there</h1>
+
+
+
+
+{{#each users}}
+<div style="background-color:#ddd;margin:10px">
+    <a href="/profile/{{this.id}}">
+
+   <img src="/{{this.photo}}" width="250"/>
+   <h1><p>{{this.name}}</p></h1>
+    <p> {{this.email}}</p>
+    </a> 
+
+</div>
+{{/each}}
+
+
+</body>
+</html>

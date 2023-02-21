@@ -1,0 +1,44 @@
+{{>header}}
+
+<body>
+    {{>navbar}}
+
+<h1>hey there</h1>
+
+
+
+
+
+    <div class="container">
+ <div class="row">
+     <div class = "col-sm-4"> 
+         <div class="list-group">
+             {{#each users}}
+            <a href="/profile/{{this.id}}" class="list-group-item list-group-item-action">{{this.name}}</a>
+            {{/each}}
+         </div>
+     </div>
+
+     <div class = "col-sm-8">
+
+         <form action="/submitpost" method="post">
+         <textarea row ="24 sm" col="12 sm" name="upost"></textarea><hr><br>
+         <button class="btn btn-primary">Post Now</button>
+         </form>
+
+        {{#each status}}
+        <b>{{this.uname}}</b>
+        <p>{{this.post}}</p>
+        {{/each}}
+
+     </div>
+ </div>
+    </div>
+
+        <li class="nav-item">
+        <a class="nav-link" href="/login">login</a>
+      </li>
+
+      
+</body>
+</html>
